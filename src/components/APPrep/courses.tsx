@@ -2,50 +2,93 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Briefcase, Pencil, Shield, Monitor, Paintbrush, Code2, Figma, Globe } from "lucide-react";
+import { Calculator, Code2, Book, Compass, BarChart, Atom, Brain, ClipboardCheck } from "lucide-react";
+
+// const courses = [
+//     {
+//         title: "Network Engineering",
+//         description: "Beginner Diploma In Basic English Grammar - Better Search",
+//         icon: Briefcase,
+//     },
+//     {
+//         title: "Product Designer",
+//         description: "Join Our Training Course & Build Your Skill.",
+//         icon: Pencil,
+//     },
+//     {
+//         title: "Security Engineer",
+//         description: "Join Our Training Course & Build Your Skill.",
+//         icon: Shield,
+//     },
+//     {
+//         title: "Digital Marketing",
+//         description: "Completed Landing Page Design & Conversion Rate 2022",
+//         icon: Monitor,
+//     },
+//     {
+//         title: "Art & Design",
+//         description: "Completed Landing Page Design & Conversion Rate 2022",
+//         icon: Paintbrush,
+//     },
+//     {
+//         title: "Web Developer",
+//         description: "Completed Landing Page Design & Conversion Rate 2022",
+//         icon: Code2,
+//     },
+//     {
+//         title: "React Front Developer",
+//         description: "Beginner Diploma In Basic English Grammar - Better Search",
+//         icon: Globe,
+//     },
+//     {
+//         title: "UI/UX Webflow",
+//         description: "Join Our Training Course & Build Your Skill.",
+//         icon: Figma,
+//     },
+// ];
 
 const courses = [
     {
-        title: "Network Engineering",
-        description: "Beginner Diploma In Basic English Grammar - Better Search",
-        icon: Briefcase,
+      title: "AP Calculus AB",
+      description: "Explore the concepts, methods, and applications of differential and integral calculus.",
+      icon: Calculator,
     },
     {
-        title: "Product Designer",
-        description: "Join Our Training Course & Build Your Skill.",
-        icon: Pencil,
+      title: "AP Computer Science A",
+      description: "Learn the fundamental concepts of computer science using Java programming language.",
+      icon: Code2,
     },
     {
-        title: "Security Engineer",
-        description: "Join Our Training Course & Build Your Skill.",
-        icon: Shield,
+      title: "AP English Literature and Composition",
+      description: "Study and analyze literary works from different periods and genres.",
+      icon: Book,
     },
     {
-        title: "Digital Marketing",
-        description: "Completed Landing Page Design & Conversion Rate 2022",
-        icon: Monitor,
+      title: "AP United States Government and Politics",
+      description: "Study the political systems, structures, and government of the United States.",
+      icon: Compass,
     },
     {
-        title: "Art & Design",
-        description: "Completed Landing Page Design & Conversion Rate 2022",
-        icon: Paintbrush,
+      title: "AP Macroeconomics",
+      description: "Study the principles of economics that apply to an economic system as a whole.",
+      icon: BarChart,
     },
     {
-        title: "Web Developer",
-        description: "Completed Landing Page Design & Conversion Rate 2022",
-        icon: Code2,
+      title: "AP Physics 1: Algebra-Based",
+      description: "Study classical mechanics, energy, and waves with algebra-based concepts.",
+      icon: Atom,
     },
     {
-        title: "React Front Developer",
-        description: "Beginner Diploma In Basic English Grammar - Better Search",
-        icon: Globe,
+      title: "AP Psychology",
+      description: "Learn the scientific study of behavior and mental processes.",
+      icon: Brain,
     },
     {
-        title: "UI/UX Webflow",
-        description: "Join Our Training Course & Build Your Skill.",
-        icon: Figma,
+      title: "AP Statistics",
+      description: "Learn about the major concepts and methods used in collecting, analyzing, and drawing conclusions from data.",
+      icon: ClipboardCheck,
     },
-];
+  ];
 
 const Courses = () => {
     return (
@@ -58,7 +101,7 @@ const Courses = () => {
                     transition={{ duration: 0.5 }}
                 >
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
-                        Our Recent Courses
+                        Our Ap Courses
                     </h2>
                     <p className="mt-4 text-gray-600">
                         On the other hand, we denounce with righteous indignation and

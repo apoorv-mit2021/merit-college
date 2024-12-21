@@ -1,6 +1,10 @@
+"use client"
+import { useState } from "react";
 import { GraduationCap, Home, School, QrCode } from "lucide-react";
 
 const FeatureSection = () => {
+    const [isModalOpen, setModalOpen] = useState(false);
+
     const features = [
         {
             icon: <Home className="text-white w-10 h-10" />,
@@ -24,9 +28,21 @@ const FeatureSection = () => {
             icon: <QrCode className="text-white w-10 h-10" />,
             title: "Connect On WeChat",
             description: "",
-            link: "#",
+            link: "wechat",
         },
     ];
+
+    const handleButtonClick = (link:string) => {
+        if (link === "wechat") {
+            setModalOpen(true);
+        } else {
+            window.location.href = link;
+        }
+    };
+
+    const closeModal = () => {
+        setModalOpen(false);
+    };
 
     return (
         <section className="bg-green-900 text-white py-10">
@@ -41,15 +57,34 @@ const FeatureSection = () => {
                         {feature.description && (
                             <p className="text-sm mb-4">{feature.description}</p>
                         )}
-                        <a
-                            href={feature.link}
-                            className="text-green-200 hover:text-white font-semibold flex items-center"
+                        <button
+                            onClick={() => handleButtonClick(feature.link)}
+                            className="bg-green-700 text-green-200 hover:bg-green-600 hover:text-white px-4 py-2 rounded-lg font-semibold"
                         >
-                            Learn More &rarr;
-                        </a>
+                            Learn More
+                        </button>
                     </div>
                 ))}
             </div>
+
+            {isModalOpen && (
+                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                    <div className="bg-white rounded-lg shadow-lg p-6 relative max-w-sm mx-auto">
+                        <button
+                            onClick={closeModal}
+                            className="absolute top-2 right-2 text-gray-600 hover:text-gray-800 font-bold text-xl"
+                        >
+                            &times;
+                        </button>
+                        <h3 className="text-lg font-bold text-center mb-4">WeChat QR Code</h3>
+                        <img
+                            src="/qr.jpg"
+                            alt="WeChat QR Code"
+                            className="w-full h-auto"
+                        />
+                    </div>
+                </div>
+            )}
         </section>
     );
 };

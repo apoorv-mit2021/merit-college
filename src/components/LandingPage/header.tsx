@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import {motion} from "framer-motion";
 import {Menu, X, ChevronDown} from "lucide-react";
-
+import  Sidebar  from "./SideBar";
 // Define types for menu and links
 type MenuLink = {
     name: string;
@@ -47,7 +47,7 @@ const Header = () => {
             links: [
                 {name: "Secondary School", href: "#"},
                 {name: "Tutoring", href: "#"},
-                {name: "Counselling", href: "#"},
+                {name: "Counselling", href: "/programs/StudentCounseling"},
                 {name: "Summer Camp", href: "#"},
                 {name: "Leadership Program", href: "#"},
                 {name: "Robotics and AI", href: "/programs/robotics-ai"},
@@ -102,7 +102,7 @@ const Header = () => {
     }, []);
 
     return (
-        <header className="bg-green-900 text-white shadow-md">
+        <header className="bg-green-900 text-white shadow-md flex items-center">
             <div className="container mx-auto flex justify-between items-center p-6">
                 {/* Logo */}
                 <Link href="/" className="flex items-center space-x-2">
@@ -216,8 +216,9 @@ const Header = () => {
                     </div>
                 </motion.div>
             )}
+            <Sidebar/>
         </header>
     );
 };
 
-export default Header;
+export default Header; 

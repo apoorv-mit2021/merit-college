@@ -6,7 +6,7 @@ import UpcomingEvents from "@/components/LandingPage/upcoming-events-section";
 import LatestNewsSection from "@/components/LandingPage/latest-news-section";
 import LandingPageHeroSection from "@/components/LandingPage/landing-page-hero";
 import Courses from "@/components/APPrep/courses";
-
+import Collaboration from "@/components/LandingPage/collaboration";
 
 export default function Home() {
     return (
@@ -14,9 +14,10 @@ export default function Home() {
             <LandingPageHeroSection/>
             <FeatureSection/>
             <AboutSection/>
-            <Courses/>
-            <ProgramSection/>
             <WhySection/>
+            <Collaboration/>
+            <ProgramSection/>
+            <Courses/>
             <UpcomingEvents/>
             <LatestNewsSection/>
         </div>
